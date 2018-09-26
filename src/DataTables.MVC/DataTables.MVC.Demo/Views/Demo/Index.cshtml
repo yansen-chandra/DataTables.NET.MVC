@@ -1,0 +1,15 @@
+﻿@model IEnumerable<PersonModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+@(
+    Html.DTC().HtmlTable(Model)
+        .Columns(column =>
+        {
+            column.Expression(p => p.Id).CssClass("col-sm-2 break-word");
+            column.Expression(p => p.FirstName).CssClass("col-sm-2");
+            column.Expression(p => p.LastName);
+            column.Expression(p => p.DateOfBirth);
+        })
+)
