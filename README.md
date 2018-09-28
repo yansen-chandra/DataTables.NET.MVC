@@ -7,8 +7,7 @@ Compared to some expensive license component, DataTables is friendlier to develo
 This is my attempt to make development on ASP.NET MVC even more easier by creating a custom html wrapper.
 The idea is you will be able to use the Razor Html Extension to define a DataTables.
 
-A simple illustration of how the piece of code will work
-
+```
 @model IEnumerable<Person>
 @(
     Html.DTC().HtmlTable(Model)
@@ -20,3 +19,7 @@ A simple illustration of how the piece of code will work
             column.Expression(p => p.DateOfBirth);
         })
 )
+```
+    
+Progress so far:
+Only able to create HtmlTable by passing model and specifing columns throgh expressions
